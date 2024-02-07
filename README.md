@@ -5,3 +5,9 @@ Bits and pieces for MythTV
 
 2 - **MythRecDel.py** : This script can be installed as a SYSTEM EVENT (Recording Deleted) to run immediately on deletion of a recording job.  It re-creates the symlink and then deletes it.
 
+Both these scripts are called with the same arguments.  It's important the arguments are double quoted to prevent spaces in the title/subtitle resulting in them being broken into multiple arguments.
+
+```
+/usr/bin/python3 /path/to/script/MythRecEnd.py "%FILE%" "%TITLE%" "%SUBTITLE%"
+/usr/bin/python3 /path/to/script/MythRecDel.py "%FILE%" "%TITLE%" "%SUBTITLE%"
+```
