@@ -68,3 +68,7 @@ def main():
 
     except Exception as e:
         syslog(f'MythRecDel Exception: {e} at line {sys.exc_info()[2].tb_lineno}')
+
+
+if __name__ == "__main__":
+    main()
